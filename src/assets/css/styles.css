@@ -1,0 +1,101 @@
+header {
+  background: #7502AF;
+}
+
+.caixa {
+  display: flex;
+  list-style-type: none;
+  position: relative;
+  margin: 0 auto;
+}
+
+nav {
+  position: absolute;
+  top: 210px;
+  right: 0;
+  text-decoration: none;
+}
+
+nav li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+nav a {
+  text-transform: uppercase;
+  color: #470b0b;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: maroon;
+  text-decoration: underline;
+}
+
+section {
+  background: #000000; 
+}
+
+h1 {
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  padding: 4rem 1rem 0 1rem;
+}  
+
+p {
+  font-size: 14px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  font-weight: normal;
+  text-align: center;
+  padding: 0 1rem 2rem 1rem;
+}
+
+.animes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;  
+}
+
+.animes img {
+  height: 25rem;
+  width: 18rem;
+  padding: 2rem 1rem 0 1rem ;
+}
+
+.filmes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; 
+}
+
+.filmes img {
+  height: 25rem;
+  width: 18rem;
+  padding: 2rem 1rem 0 1rem;
+}
+
+.sugestoes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;  
+}
+
+.sugestoes img {
+  height: 25rem;
+  width: 18rem;
+  padding: 2rem 1rem 0 1rem;
+}
+
+.rodape {  
+  background-image: linear-gradient(180deg, #000000 30%, #7502af 70%);
+  text-align: center;
+  color: #000000;
+  font-size: 1rem;
+  grid-area: rodape;
+  padding: 4rem 1rem 2rem 1rem;
+}
