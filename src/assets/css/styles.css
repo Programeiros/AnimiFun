@@ -1,0 +1,97 @@
+.body {
+  background-color: #000000;  
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+      display: grid;
+      grid-template-columns: auto 1fr;
+  }
+}
+
+.principal {
+  padding: 24px 16px;
+  display: grid;
+  gap: 16px;
+}
+
+.titulo-secao {
+  padding: 3px 0 1px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 1024px) {
+  .principal {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-areas: 
+          "titulo-pagina"          
+          "secao-animes"
+          "secao-filmes"
+          "secao-sugestoes"       
+      ;
+      column-gap: 32px;
+      padding: 16px 60px;
+      grid-row: 2;
+  }
+  
+  .titulo-secao {
+      grid-column: span 4;
+  }
+}
+
+.cartao {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #2C3A3A;
+  color: #FFFFFF;
+}
+
+.cartao__imagem {
+  width: 100%;
+  height: 20rem;
+}
+
+.cartao__conteudo {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 2fr;
+  row-gap: 8px;
+}
+
+.cartao__titulo {  
+  font-size: 1.25rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: 300;
+  grid-column: span 2;
+}
+
+.cartao__botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(155, 20, 155);
+  color: #FFFFFF;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 0.9rem;  
+}
+
+.secao {
+  padding: 2rem 0;
+  display: grid;
+  gap: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+  .secao {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
