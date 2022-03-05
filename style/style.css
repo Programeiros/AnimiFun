@@ -191,4 +191,15 @@ nav{
 	box-shadow: 5px 8px 30px #FF9900;
 }
 
+.tooltip{
+	height: 962px;
+	width: 398px;
+	position: fixed;
+	top: 10px;
+	left: 0;
+	z-index: 2;
+	background: linear-gradient(180.55deg, #F6F6F6 0.48%, rgba(247, 247, 247, 0) 179.72%);
+	
+	border-radius: 0px 60px 60px 0px;
+}
 
