@@ -282,4 +282,12 @@ nav{
 	font-size: 24px;
 	font-weight: 700;
 	line-height: 28.8px;
+	color: #000000;
+}
+
+.tooltip__description{
+	margin: 0 19.46px 30px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #000000;
 }
