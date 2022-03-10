@@ -236,7 +236,29 @@ nav{
 	cursor: pointer;
 }
 
+.categories{
+	height: 54px;
+	width: 100%;
+	display: grid;
+	grid-template-areas: '1 2 3 4'
+											 '5 5 5 5';
+}
+
 .categories__item{
 	height: 21px;
+	width: auto;
+	border-radius: 20px;
+	justify-self: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #FFF;
+}
+
+.categories__text{
+	margin: 0 10px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #808080;
 }
 
