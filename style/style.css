@@ -275,3 +275,11 @@ nav{
 	line-height: 14.4px;
 	color: #2267CE;
 }
+
+.tooltip__title{
+	margin-bottom:  30px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 28.8px;
+}
