@@ -239,6 +239,7 @@ nav{
 .categories{
 	height: 54px;
 	width: 100%;
+	margin-bottom: 30.63px;
 	display: grid;
 	grid-template-areas: '1 2 3 4'
 											 '5 5 5 5';
@@ -262,3 +263,15 @@ nav{
 	color: #808080;
 }
 
+.tooltip__datas{
+	margin: 0 23.82px 30px 24px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.datas__text{
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 14.4px;
+	color: #2267CE;
+}
