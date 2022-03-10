@@ -203,3 +203,21 @@ nav{
 	border-radius: 0px 60px 60px 0px;
 }
 
+.background{
+	height: 373px;
+	width: 378.54px;
+	margin: 10px 9.73px 34px;
+	border-radius: 60px 60px 0px 0px;
+}
+
+.background__img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 0 60px 0 0;
+}
+
+.categories__item{
+	height: 21px;
+}
+
