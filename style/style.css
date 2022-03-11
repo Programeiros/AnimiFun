@@ -192,6 +192,7 @@ nav{
 }
 
 .tooltip{
+	display: none;
 	height: 962px;
 	width: 398px;
 	position: fixed;
@@ -201,6 +202,35 @@ nav{
 	background: linear-gradient(180.55deg, #F6F6F6 0.48%, rgba(247, 247, 247, 0) 179.72%);
 	backdrop-filter: blur(30px);
 	border-radius: 0px 60px 60px 0px;
+	animation: scale .35s;
+	
+}
+
+.tooltip--exit{
+	animation-direction: reverse;
+	animation: scale .35s;
+}
+
+@keyframes scale-out {
+	from{
+		transform: scale(100%, 100%);
+		opacity: 1;
+	}
+	to{
+		transform: scale(0, 100%);
+		opacity: 0;
+	}
+}
+
+@keyframes scale {
+	from{
+		transform: scale(0, 100%);
+		opacity: 0;
+	}
+	to{
+		transform: scale(100%, 100%);
+		opacity: 1;
+	}
 }
 
 .background{
