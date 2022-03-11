@@ -116,6 +116,7 @@ nav{
 }
 
 .carousel__content{
+	transition: all 1s;
 	display: flex;
 	align-items: start;
 	overflow: hidden;
@@ -344,9 +345,19 @@ nav{
 
 .tooltip__playlist{
 	margin-top: 20px;
-	border: 2px solid #FFFFFF;
+	border: 2px solid #FFF;
 	background-color: transparent;
 	
+}
+
+.tooltip__play:hover{
+	background-color: #955900;
+}
+
+.tooltip__playlist:hover{
+	color: #000000;
+	border: 2px solid #000;
+	background-color: transparent;
 }
 
 

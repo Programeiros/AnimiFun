@@ -1,19 +1,6 @@
 const section = document.getElementsByClassName("section__img")
 const tooltip = document.getElementsByClassName("tooltip")
 const back = document.getElementsByClassName("back")
-const left = document.getElementsByClassName("footer__left")
-const right = document.getElementsByClassName("footer__right")
-const carousel = document.getElementsByClassName("carousel__content")
-let distanceRightTop = "100"
-
-
-Array.from(left).forEach(item=>{
-	item.addEventListener("click", openTooltip)
-})
-
-Array.from(right).forEach(item=>{
-	item.addEventListener("click", moveRight)
-})
 
 Array.from(section).forEach(item=>{
 	item.addEventListener("click", openTooltip)
@@ -30,10 +17,7 @@ back[0].addEventListener("click", ()=>{
 function openTooltip(){
 	tooltip[0].style.animation = "scale .35s"
 	tooltip[0].style.display = "block"
-}
-
-function moveRight(){
-	if(this.attributes.value.value == "top"){
-		carousel[0].style.transform = "translateX("	+ distanceRightTop + "px)"
-	}
+	tooltip[0].children[0].children[0].src =  this.src
+	tooltip[0].children[1].children[2].innerText = this.parentElement.parentElement.children[1].innerText
+	console.log(this.parentElement.parentElement.children[1].innerText)
 }
