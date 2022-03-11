@@ -199,7 +199,7 @@ nav{
 	left: 0;
 	z-index: 2;
 	background: linear-gradient(180.55deg, #F6F6F6 0.48%, rgba(247, 247, 247, 0) 179.72%);
-	backdrop-filter: blur(50px);
+	backdrop-filter: blur(30px);
 	border-radius: 0px 60px 60px 0px;
 }
 
@@ -290,4 +290,31 @@ nav{
 	font-size: 14px;
 	font-weight: 400;
 	color: #000000;
+}
+
+.tooltip__buttons{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.tooltip__play{
+	width: 360px;
+	height: 42px;
+	border-radius: 60px;
+	border-style: none;
+
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 21.6px;
+	color: #FFFFFF;
+	background-color: #FF9900;
+}
+
+.tooltip__playlist{
+	margin-top: 20px;
+	border: 2px solid #FFFFFF;
+	background-color: transparent;
+	
 }
