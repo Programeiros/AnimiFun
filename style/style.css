@@ -345,7 +345,8 @@ nav{
 
 .tooltip__playlist{
 	margin-top: 20px;
-	border: 2px solid #FFF;
+	color: #000000;
+	border: 2px solid #000;
 	background-color: transparent;
 	
 }
@@ -355,9 +356,11 @@ nav{
 }
 
 .tooltip__playlist:hover{
-	color: #000000;
-	border: 2px solid #000;
+	color: #5b5b5b;
+	border: 2px solid #5b5b5b;
 	background-color: transparent;
 }
 
-
+.script{
+	display: none;
+}
