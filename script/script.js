@@ -4,24 +4,32 @@ const back = document.getElementsByClassName("back")
 const footer = document.getElementsByClassName("carousel__footer")
 const carousel = document.getElementsByClassName("carousel__content")
 let i = 0
-let move = 0
+let move1 = 0
+let move2 = 0
 let translateAfter = "px)"
 let translateBefore = "translate("
 
 
 Array.from(footer).forEach(element => {
     element.addEventListener("click", () => {
-        console.log(move)
+        console.log(move1, move2)
 
         if (event.target.className == "footer__right") {
             if (event.target.y == 518) {
-                move = move - 300
-                carousel[0].style.transform = translateBefore + move + translateAfter
+                move1 = move1 - 600
+                carousel[0].style.transform = translateBefore + move1 + translateAfter
+            } else if (event.target.y == 948) {
+                move2 = move2 - 600
+                carousel[1].style.transform = translateBefore + move2 + translateAfter
             }
+
         } else if (event.target.className == "footer__left") {
             if (event.target.y == 518) {
-                move = move + 300
-                carousel[0].style.transform = translateBefore + move + translateAfter
+                move1 = move1 + 600
+                carousel[0].style.transform = translateBefore + move1 + translateAfter
+            } else if (event.target.y == 948) {
+                move2 = move2 + 600
+                carousel[1].style.transform = translateBefore + move2 + translateAfter
             }
         }
     })
