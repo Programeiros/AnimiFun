@@ -3,33 +3,64 @@ const tooltip = document.getElementsByClassName("tooltip")
 const back = document.getElementsByClassName("back")
 const footer = document.getElementsByClassName("carousel__footer")
 const carousel = document.getElementsByClassName("carousel__content")
+const pageNumber = document.getElementsByClassName("count__number")
 let i = 0
 let move1 = 0
 let move2 = 0
-let translateAfter = "px)"
-let translateBefore = "translate("
-
+let cont1 = 1
+let cont2 = 1
 
 Array.from(footer).forEach(element => {
     element.addEventListener("click", () => {
-        console.log(move1, move2)
 
         if (event.target.className == "footer__right") {
             if (event.target.y == 518) {
-                move1 = move1 - 600
-                carousel[0].style.transform = translateBefore + move1 + translateAfter
+                if (carousel[0].children[9].getBoundingClientRect().right < window.innerWidth) {
+                    let dif = window.innerWidth - carousel[0].children[12].getBoundingClientRect().right
+                    console.log(dif)
+                    move1 = move1 + dif - 20
+                } else {
+                    move1 = move1 - 500
+                }
+                if (cont1 == 4) {
+                    cont1 = 1
+                    move1 = 0
+                } else {
+                    cont1 = cont1 + 1
+                }
+
+                pageNumber[0].innerText = cont1
+                carousel[0].style.marginLeft = move1 + "px"
+
+
             } else if (event.target.y == 948) {
-                move2 = move2 - 600
-                carousel[1].style.transform = translateBefore + move2 + translateAfter
+                if (carousel[1].children[9].getBoundingClientRect().right < window.innerWidth) {
+                    let dif = window.innerWidth - carousel[1].children[12].getBoundingClientRect().right
+                    move2 = move2 + dif - 20
+                } else {
+                    move2 = move2 - 500
+                }
+                if (cont2 == 4) {
+                    cont2 = 1
+                    move2 = 0
+                } else {
+                    cont2 = cont2 + 1
+                }
+                pageNumber[2].innerText = cont2
+                carousel[1].style.marginLeft = move2 + "px"
             }
 
         } else if (event.target.className == "footer__left") {
             if (event.target.y == 518) {
-                move1 = move1 + 600
-                carousel[0].style.transform = translateBefore + move1 + translateAfter
+                cont1 = cont1 - 1
+                pageNumber[0].innerText = cont1
+                move1 = move1 + 500
+                carousel[0].style.marginLeft = move1 + "px"
             } else if (event.target.y == 948) {
-                move2 = move2 + 600
-                carousel[1].style.transform = translateBefore + move2 + translateAfter
+                cont2 = cont2 - 1
+                pageNumber[2].innerText = cont2
+                move2 = move2 + 500
+                carousel[1].style.marginLeft = move2 + "px"
             }
         }
     })
