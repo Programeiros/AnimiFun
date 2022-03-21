@@ -9,57 +9,65 @@ let move1 = 0
 let move2 = 0
 let cont1 = 1
 let cont2 = 1
+carousel[0].style.marginLeft = "0px"
+let dis = (carousel[0].scrollLeftMax)/2 + 10
 
 Array.from(footer).forEach(element => {
     element.addEventListener("click", () => {
-
+				
         if (event.target.className == "footer__right") {
             if (event.target.y == 518) {
-                if (carousel[0].children[9].getBoundingClientRect().right < window.innerWidth) {
-                    let dif = window.innerWidth - carousel[0].children[12].getBoundingClientRect().right
-                    console.log(dif)
-                    move1 = move1 + dif - 20
-                } else {
-                    move1 = move1 - 500
-                }
-                if (cont1 == 4) {
+                move1 = move1 - dis 
+                if (cont1 == 3) {
                     cont1 = 1
                     move1 = 0
                 } else {
                     cont1 = cont1 + 1
                 }
-
                 pageNumber[0].innerText = cont1
                 carousel[0].style.marginLeft = move1 + "px"
 
-
             } else if (event.target.y == 948) {
-                if (carousel[1].children[9].getBoundingClientRect().right < window.innerWidth) {
-                    let dif = window.innerWidth - carousel[1].children[12].getBoundingClientRect().right
-                    move2 = move2 + dif - 20
-                } else {
-                    move2 = move2 - 500
-                }
-                if (cont2 == 4) {
+                move2 = move2 - dis
+                if (cont2 == 3) {
                     cont2 = 1
                     move2 = 0
                 } else {
                     cont2 = cont2 + 1
+										
                 }
                 pageNumber[2].innerText = cont2
                 carousel[1].style.marginLeft = move2 + "px"
             }
 
-        } else if (event.target.className == "footer__left") {
+        } 
+				
+				else if (event.target.className == "footer__left") {
             if (event.target.y == 518) {
-                cont1 = cont1 - 1
-                pageNumber[0].innerText = cont1
-                move1 = move1 + 500
+                
+								if(cont1 == 1){
+										cont1 = 3
+										move1 = move1 - dis*2
+								}
+								else{
+									cont1 = cont1 - 1
+									move1 =  move1 + dis
+									
+								}
+								pageNumber[0].innerText = cont1
                 carousel[0].style.marginLeft = move1 + "px"
+							
             } else if (event.target.y == 948) {
-                cont2 = cont2 - 1
-                pageNumber[2].innerText = cont2
-                move2 = move2 + 500
+                
+								if(cont2 == 1){
+										cont2 = 3
+										move2 = move2 - dis*2
+								}
+								else{
+									cont2 = cont2 - 1
+									move2 =  move2 + dis
+								}
+								pageNumber[2].innerText = cont2
                 carousel[1].style.marginLeft = move2 + "px"
             }
         }

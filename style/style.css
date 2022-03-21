@@ -114,6 +114,7 @@ nav {
 }
 
 .carousel__content {
+		width: auto;
     transition: all 1s;
     display: flex;
     align-items: start;
