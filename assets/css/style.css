@@ -45,6 +45,10 @@ nav {
     filter: invert(57%) sepia(74%) saturate(1539%) hue-rotate(0deg) brightness(103%) contrast(103%);
 }
 
+.menu {
+    display: none;
+}
+
 .logo {
     margin-top: 51px;
     position: absolute;
@@ -114,7 +118,7 @@ nav {
 }
 
 .carousel__content {
-		width: auto;
+    width: auto;
     transition: all 1s;
     display: flex;
     align-items: start;
@@ -358,4 +362,86 @@ nav {
 
 .script {
     display: none;
+}
+
+@media (max-width: 1024px) {
+    nav {
+        height: 83.5px;
+        display: flex;
+        margin: 0 16px;
+        align-items: center;
+        justify-content: space-between;
+        animation: down .35s;
+        transition: all .5s;
+    }
+    .nav__list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 26px;
+        left: 16px;
+        animation: down .35s;
+        margin-top: 0;
+    }
+    @keyframes down {
+        0% {
+            opacity: 0;
+            transform: rotateX(-90deg);
+        }
+        50% {
+            transform: rotateX(-20deg);
+        }
+        100% {
+            opacity: 1;
+            transform: rotateX(0deg);
+        }
+    }
+    .nav__item {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .nav__search {
+        display: none;
+    }
+    .menu {
+        margin-top: 3px;
+        transition: all .25s;
+        display: block;
+    }
+    .logo {
+        margin: 0;
+        right: 16px;
+    }
+    .carousel {
+        max-height: 388px;
+        margin: 0 16px 40px;
+        overflow: hidden;
+    }
+    .carousel__content {
+        height: 399px;
+        overflow: scroll;
+    }
+    .page__count {
+        display: none;
+    }
+    .carousel__footer {
+        display: none;
+    }
+    section {
+        flex: none;
+    }
+    .tooltip {
+        width: 100%;
+        max-width: 398px;
+    }
+    .tooltip__buttons {
+        margin: 0 16px;
+    }
+    .tooltip__play {
+        width: 100%;
+    }
+    .background {
+        width: calc(100% - 16px);
+        margin-right: 16px;
+    }
 }
