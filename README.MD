@@ -1,7 +1,7 @@
 # AnimiFun
 
 ## Sobre o AnimiFun
-![imagem](/assets/animes.webp)
+![imagem](/assets/img/animes.webp)
 
 O AnimiFun consiste em um site demonstrativo de frontend simulando um streaming de animes com algumas funcionalidades implementadas como slide de carrossel e abertura de tooltip informativo sobre o anime escolhido.
   #### Você pode acessa-lo [aqui](https://programeiros.github.io/AnimiFun/)
