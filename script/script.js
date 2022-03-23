@@ -10,54 +10,57 @@ let move2 = 0
 let cont1 = 1
 let cont2 = 1
 carousel[0].style.marginLeft = "0px"
-let dis = (carousel[0].scrollLeftMax)/2 + 10
+let dis = (carousel[1].scrollWidth - carousel[0].clientWidth)/2 + 10
+if(carousel[1].scrollWidth == carousel[0].clientWidth){
+	setTimeout(()=>{
+		dis = (carousel[1].scrollWidth - carousel[0].clientWidth)/2 + 10
+	}, 500)
+}
 
 Array.from(footer).forEach(element => {
+		
     element.addEventListener("click", () => {
-				
-        if (event.target.className == "footer__right") {
-            if (event.target.y == 518) {
-                move1 = move1 - dis 
-                if (cont1 == 3) {
-                    cont1 = 1
-                    move1 = 0
-                } else {
-                    cont1 = cont1 + 1
-                }
-                pageNumber[0].innerText = cont1
-                carousel[0].style.marginLeft = move1 + "px"
-
-            } else if (event.target.y == 948) {
-                move2 = move2 - dis
-                if (cont2 == 3) {
-                    cont2 = 1
-                    move2 = 0
-                } else {
-                    cont2 = cont2 + 1
-										
-                }
-                pageNumber[2].innerText = cont2
-                carousel[1].style.marginLeft = move2 + "px"
-            }
-
+        if (event.target.className == "footer__right top") {		
+            move1 = move1 - dis 
+						if (cont1 == 3) {
+								cont1 = 1
+								move1 = 0
+						} else {
+								cont1 = cont1 + 1
+						}
+						pageNumber[0].innerText = cont1
+						carousel[0].style.marginLeft = move1 + "px"
+    
+				} 
+				else if(event.target.className == "footer__right") {
+						move2 = move2 - dis
+						if (cont2 == 3) {
+								cont2 = 1
+								move2 = 0
+						} else {
+								cont2 = cont2 + 1
+								
+						}
+						pageNumber[2].innerText = cont2
+						carousel[1].style.marginLeft = move2 + "px"
         } 
 				
-				else if (event.target.className == "footer__left") {
-            if (event.target.y == 518) {
+				else if (event.target.className == "footer__left top") {
                 
-								if(cont1 == 1){
-										cont1 = 3
-										move1 = move1 - dis*2
-								}
-								else{
-									cont1 = cont1 - 1
-									move1 =  move1 + dis
-									
-								}
-								pageNumber[0].innerText = cont1
-                carousel[0].style.marginLeft = move1 + "px"
+						if(cont1 == 1){
+								cont1 = 3
+								move1 = move1 - dis*2
+						}
+						else{
+							cont1 = cont1 - 1
+							move1 =  move1 + dis
 							
-            } else if (event.target.y == 948) {
+						}
+						pageNumber[0].innerText = cont1
+						carousel[0].style.marginLeft = move1 + "px"
+							
+        } 
+				else if (event.target.className == "footer__left") {
                 
 								if(cont2 == 1){
 										cont2 = 3
@@ -69,8 +72,8 @@ Array.from(footer).forEach(element => {
 								}
 								pageNumber[2].innerText = cont2
                 carousel[1].style.marginLeft = move2 + "px"
-            }
         }
+        
     })
 });
 
