@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css" class="css">
+    <link rel="stylesheet" href="assets/css/style.css" class="css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    <script defer src="script/script.js"></script>
+    <script defer src="assets/js/script.js"></script>
     <title>AnimeFun</title>
 </head>
 
 <body>
 
-    <nav>
+    <nav class="nav">
+        <div class="menu">
+            <img src="assets/img/menu.svg" alt="" class="menu__img">
+        </div>
 
         <ul class="nav__list">
             <li class="nav__item nav__home">Home</li>
@@ -23,7 +26,7 @@
             <li class="nav__item nav__movies">Filmes</li>
             <li class="nav__item nav__animes">Animes</li>
             <li class="nav__item nav__playlist">Playlist</li>
-            <li class="nav__item nav__search"><img src="assets/lupa.png" alt="" class="nav__img"></li>
+            <li class="nav__item nav__search"><img src="assets/img/lupa.png" alt="" class="nav__img"></li>
         </ul>
 
         <div class="logo">
@@ -60,7 +63,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/black-clover.jpg" alt="" class="section__img">
+                    <img src="assets/img/black-clover.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">Black Clover</h3>
@@ -90,7 +93,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/daily.jpg" alt="" class="section__img">
+                    <img src="assets/img/daily.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">The Daily Life of the Immortal King</h3>
@@ -120,7 +123,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/puraore.jpg" alt="" class="section__img">
+                    <img src="assets/img/puraore.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">Puraore!<br> Pride of Orange</h3>
@@ -149,7 +152,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/RoR.jpg" alt="" class="section__img">
+                    <img src="assets/img/RoR.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">Record of Ragnarok</h3>
@@ -178,7 +181,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/castle.jpg" alt="" class="section__img">
+                    <img src="assets/img/castle.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">Castlevania</h3>
@@ -207,7 +210,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/B.jpg" alt="" class="section__img">
+                    <img src="assets/img/B.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">B: The Beginning</h3>
@@ -236,7 +239,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/never.jpg" alt="" class="section__img">
+                    <img src="assets/img/never.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">the promised neverland</h3>
@@ -266,7 +269,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/violet.jpg" alt="" class="section__img">
+                    <img src="assets/img/violet.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">Violet Evergarden</h3>
@@ -295,7 +298,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/angel.jpg" alt="" class="section__img">
+                    <img src="assets/img/angel.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">Angel Beats!</h3>
@@ -324,7 +327,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/charlote.jpg" alt="" class="section__img">
+                    <img src="assets/img/charlote.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">Charlotte</h3>
@@ -355,7 +358,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/ano.jpg" alt="" class="section__img">
+                    <img src="assets/img/ano.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">Ano Hana</h3>
@@ -384,7 +387,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/shigatsu.jpg" alt="" class="section__img">
+                    <img src="assets/img/shigatsu.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">Shigatsu Wa Kimi no Uso</h3>
@@ -415,7 +418,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/showa.png" alt="" class="section__img">
+                    <img src="assets/img/showa.png" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">Showa Genroku <br> Rakugo Shinju</h3>
@@ -445,8 +448,8 @@
         </div>
 
         <div class="carousel__footer">
-            <img src="assets/left.png" class="footer__left top">
-            <img src="assets/right.png" class="footer__right top">
+            <img src="assets/img/left.png" class="footer__left top">
+            <img src="assets/img/right.png" class="footer__right top">
         </div>
 
     </div>
@@ -479,7 +482,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/dark.jpg" alt="" class="section__img">
+                    <img src="assets/img/dark.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">Dark than Black</h3>
@@ -509,7 +512,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/castelo.jpg" alt="" class="section__img">
+                    <img src="assets/img/castelo.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">O Castelo Animado</h3>
@@ -539,7 +542,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/dbs.jpg" alt="" class="section__img">
+                    <img src="assets/img/dbs.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">Dragon Ball Super: Broly</h3>
@@ -569,7 +572,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/Kimi.webp" alt="" class="section__img">
+                    <img src="assets/img/Kimi.webp" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">Kimi No Na Wa</h3>
@@ -599,7 +602,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/naruto.jpg" alt="" class="section__img">
+                    <img src="assets/img/naruto.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">Naruto: O Filme</h3>
@@ -628,7 +631,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/mha.jpg" alt="" class="section__img">
+                    <img src="assets/img/mha.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">My Hero Academia</h3>
@@ -658,7 +661,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/evangelion.jpeg" alt="" class="section__img">
+                    <img src="assets/img/evangelion.jpeg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">Evangelion</h3>
@@ -687,7 +690,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/hai.jpg" alt="" class="section__img">
+                    <img src="assets/img/hai.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">hai to gensou no grimgar</h3>
@@ -717,7 +720,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/onepiece.jpg" alt="" class="section__img">
+                    <img src="assets/img/onepiece.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">one piece gold</h3>
@@ -747,7 +750,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/ds.jpg" alt="" class="section__img">
+                    <img src="assets/img/ds.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">demon slayer mugen train</h3>
@@ -777,7 +780,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/hotarubi.jpg" alt="" class="section__img">
+                    <img src="assets/img/hotarubi.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">hotarubi no mori e</h3>
@@ -808,7 +811,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/gintama.jpg" alt="" class="section__img">
+                    <img src="assets/img/gintama.jpg" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">gintama</h3>
@@ -837,7 +840,7 @@
             <section>
 
                 <div class="section__img-box">
-                    <img src="assets/danshi.webp" alt="" class="section__img">
+                    <img src="assets/img/danshi.webp" alt="" class="section__img">
                 </div>
 
                 <h3 class="section__title">danshi koukousei no nichijou</h3>
@@ -868,8 +871,8 @@
         </div>
 
         <div class="carousel__footer">
-            <img src="assets/left.png" class="footer__left">
-            <img src="assets/right.png" class="footer__right">
+            <img src="assets/img/left.png" class="footer__left">
+            <img src="assets/img/right.png" class="footer__right">
         </div>
 
     </div>
@@ -877,9 +880,9 @@
     <div class="tooltip">
 
         <div class="background">
-            <img src="assets/angel.jpg" alt="" class="background__img">
+            <img src="assets/img/angel.jpg" alt="" class="background__img">
             <div class="back">
-                <img src="assets/back.png" alt="" class="back__img">
+                <img src="assets/img/back.png" alt="" class="back__img">
             </div>
         </div>
 
